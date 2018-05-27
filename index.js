@@ -15,7 +15,7 @@ app.get('/', (req,res)=>{
 			res.send("Oops!");
 		}
 	}catch (err){
-		res.send('Oops!');
+		res.send('/?url=<youtube_video_url>');
 	}
 });
 
@@ -84,7 +84,7 @@ app.get('/iamfeelinglucky',(req,res)=>{
 		}
 
 	}).catch(err=>{
-		res.send("/?url=<youtube_video_url>");
+		res.send("Oops!");
 	});
 })
 
