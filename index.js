@@ -84,7 +84,7 @@ app.get('/iamfeelinglucky',(req,res)=>{
 		}
 
 	}).catch(err=>{
-		res.send("Oops!");
+		res.send("/?url=<youtube_video_url>");
 	});
 })
 
