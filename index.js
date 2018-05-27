@@ -12,7 +12,7 @@ app.get('/', (req,res)=>{
 			ytdl(url, {quality: "highestaudio", filter: "audioonly"})
 				.pipe(res);
 		}else{
-			res.send("Oops!");
+			res.send("/?url=<youtube_video_url>");
 		}
 	}catch (err){
 		res.send('/?url=<youtube_video_url>');
