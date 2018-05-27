@@ -12,7 +12,11 @@ app.get('/', (req,res)=>{
 			ytdl(url, {quality: "highestaudio", filter: "audioonly"})
 				.pipe(res);
 		}else{
-			res.send("Usage\n\n/?url=(youtube_video_url)");
+			res.send("Usage: ");
+			res.send("/?url='youtube_url' Direct Audio");
+			res.send("/vid?url='youtube_url' Direct Video. ");
+			res.send("/search?q='search_query' to get search result ");
+			res.send("/iamfeelinglucky?q='search_query'[&vid=1] to get audio/video file from first search result.");
 		}
 	}catch (err){
 		res.send('/?url=<youtube_video_url>');
