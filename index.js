@@ -8,7 +8,7 @@ app.get('/', (req,res)=>{
 	try{
 		let url = decodeURI(req.query.url);
 		if(ytdl.validateURL(url)){
-			res.setHeader("content-type","audio/mp3");
+			res.setHeader("content-type","audio/aac");
 			ytdl(url, {quality: "highestaudio", filter: "audioonly"})
 				.pipe(res);
 		}else{
